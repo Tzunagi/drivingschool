@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>C&T Driving School</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="files/logo.png" type="image/png" />
 </head>
 <body>
   <!-- ======= HEADER ======= -->
@@ -21,6 +22,7 @@
         <a href="#services">Services</a>
         <a href="#contact">Contact Us</a>
         <a href="#location">Location</a>
+        <a href="#faq">FAQ</a>
       </nav>
 
       <!-- Mobile Burger Menu Icon -->
@@ -37,6 +39,7 @@
       <a href="#services" onclick="toggleMenu()">Services</a>
       <a href="#contact" onclick="toggleMenu()">Contact Us</a>
       <a href="#location" onclick="toggleMenu()">Location</a>
+      <a href="#faq" onclick="toggleMenu()">Frequently Asked Questions</a>
     </div>
   </header>
 
@@ -153,6 +156,28 @@
       </div>
     </section>
 
+    <!-- ======= FAQ SECTION ======= -->
+    <section id="faq">
+      <div class="contact-glass">
+        <h2>Frequently Asked Questions</h2>
+        <button class="contact-button" onclick="toggleQuestions(this)">What forms of payment do you accept?</button>
+        <div class="extra-details">
+          We accept <strong>cash only</strong> for all our services. Please make sure to bring the exact amount to avoid any inconvenience.
+        </div>
+        <button class="contact-button" onclick="toggleQuestions(this)">What documents do I need to bring for my driving lessons?</button>
+        <div class="extra-details">
+          Please bring your <strong>learner’s permit</strong>. If you don’t have a learner’s permit, but you have a valid driver’s license from your home country, bring that along with any privilege documents you may have.
+        </div>
+        <button class="contact-button" onclick="toggleQuestions(this)">How do I schedule a driving lesson or road test?</button>
+        <div class="extra-details">
+          We are open <strong>7 days a week (Monday to Sunday)</strong>. Please call to make an appointment in advance to secure your preferred time.
+        </div>
+        <button class="contact-button" onclick="toggleQuestions(this)">Do you provide vehicles for the road test?</button>
+        <div class="extra-details">
+          For your convenience, we supply a <strong>well-maintained car</strong> during the road test, eliminating the need to bring a vehicle.
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- ======= JAVASCRIPT ======= -->
@@ -191,6 +216,28 @@
       const isOpen = detailBox.classList.contains('open');
       button.textContent = isOpen ? 'Hide Detail' : 'More Detail';
     }
+
+    function toggleQuestions(button) {
+      const detailBox = button.nextElementSibling;
+      detailBox.classList.toggle('open');
+    }
+
+    const locationDiv = document.getElementById('faq');
+    const images = [
+      'files/deskone.jpg',
+      'files/desktwo.jpg',
+      'files/deskclass.jpg',
+      'files/awards.jpg'
+    ];
+    let index = 0;
+
+    function changeBackground() {
+      locationDiv.style.backgroundImage = `url('${images[index]}')`;
+      index = (index + 1) % images.length;
+    }
+
+    changeBackground(); // initial image
+    setInterval(changeBackground, 5000); // change every 5 seconds
   </script>
 </body>
 </html>

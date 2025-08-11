@@ -373,7 +373,7 @@ section {
   height: 400px;
   background-size: cover;
   background-position: center center;
-  transition: background-image 1s ease-in-out;
+  transition: background-image 1s ease-in;
 }
 
 /* =========================

@@ -423,3 +423,223 @@ section {
     padding: 0.4rem 0.9rem;
   }
 }
+
+/* =========================
+   Google Header
+========================= */
+.google-reviews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;          /* space between logo, text, and button */
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+  z-index: 1;
+}
+
+.google-logo {
+  width: 100px;
+  height: auto;
+}
+
+.review-summary {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.stars {
+  color: #fbbc04;    /* Google-style gold stars */
+  font-size: 2rem;
+}
+
+.rating {
+  font-weight: bold;
+  font-size: 2rem;
+  color: white;
+}
+
+.count {
+  color: whitesmoke;
+  font-size: 0.9rem;
+}
+
+.write-review-button {
+  background-color: #4285F4; /* Google blue */
+  color: white;
+  padding: 12px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.write-review-button:hover {
+  background-color: #3367d6;
+}
+
+/* =========================
+   Review Containers
+========================= */
+.slide-container{
+  max-width: 1120px;
+  width: 100%;
+}
+.slide-content{
+  margin: 0 40px;
+  overflow: hidden;
+  border-radius: 25px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* ensures button stays at the bottom */
+  height: 250px; /* fixed card height */
+  padding: 16px;
+  border-radius: 20px;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+.image-content,
+.card-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-start; /* don’t push content to bottom */
+}
+.image-content{
+  position: relative;
+  row-gap: 5px;
+  padding: 25px 0;
+}
+.overlay{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #4070F4;
+  border-radius: 25px 25px 0 25px;
+}
+.overlay::before,
+.overlay::after{
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  height: 40px;
+  width: 40px;
+  background-color: #4070F4;
+}
+.overlay::after{
+  border-radius: 0 25px 0 0;
+  background-color: #FFF;
+}
+.name{
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+.description {
+  font-size: 0.9rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;       /* limit to 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;             /* hide the extra text */
+  text-overflow: ellipsis;
+  margin-bottom: auto;          /* push Read More button to bottom */
+}
+.button {
+  margin-top: auto;
+  align-self: center;
+  padding: 6px 12px;
+  font-size: 0.8rem; /* smaller font */
+  text-decoration: none;
+  color: white;
+  border-radius: 6px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover{
+  background-color: rgba(50, 50, 50, 0.5);
+}
+
+.swiper-navBtn{
+  color: rgba(255, 255, 255, 0.25);
+  transition: color 0.3s ease;
+}
+.swiper-navBtn:hover{
+  color: white;
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after{
+  font-size: 35px;
+}
+.swiper-button-next{
+  right: 0;
+}
+.swiper-button-prev{
+  left: 0;
+}
+.swiper-pagination {
+  position: relative;       /* move it out of absolute positioning */
+  margin-top: 20px;         /* space between slides and bullets */
+  display: flex;
+  justify-content: center;  /* center the bullets */
+}
+
+.swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0.25);
+  opacity: 1;
+  margin: 0 4px;            /* small gap between bullets */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .slide-content{
+    margin: 0 10px;
+  }
+  .swiper-navBtn{
+    display: none;
+  }
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.75rem;
+}
+
+.reviewer-info .name {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.stars {
+  color: #fbbc04;
+  font-size: 1.5rem;
+}

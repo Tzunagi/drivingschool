@@ -150,29 +150,14 @@ section {
   font-weight: bolder;
 }
 
-.about-glass .subheading {
+#welcome {
+  font-size: 3rem;
+}
+
+#subheading {
   font-size: 1.4rem;
   margin: 0.3rem 0;
   color: #e0e0e0;
-}
-
-h2 {
-  font-size: 2rem; /* adjust as needed */
-}
-
-.subheading {
-  font-size: 1.2rem; /* adjust as needed */
-}
-
-/* Mobile styles */
-@media screen and (max-width: 768px) {
-  h2 {
-    font-size: 1rem; /* smaller on mobile */
-  }
-
-  .subheading {
-    font-size: 0.6rem; /* smaller on mobile */
-  }
 }
 
 #services {
@@ -401,6 +386,14 @@ h2 {
    Responsive
 ========================= */
 @media (max-width: 768px) {
+  #welcome {
+    font-size: 2rem;
+  }
+
+  #subheading {
+    font-size: 1.2rem;
+  }
+
   .nav-links {
     display: none;
   }

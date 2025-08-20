@@ -26,12 +26,25 @@ function copyAddress(event) {
   });
 }
 
-function toggleDetails(button) {
-  const detailBox = button.nextElementSibling;
+function toggleDetails(buttonOrLi) {
+  const detailBox = buttonOrLi.closest('.tier').querySelector('.extra-details');
   detailBox.classList.toggle('open');
+  
   const isOpen = detailBox.classList.contains('open');
-  button.textContent = isOpen ? 'Hide Detail' : 'More Detail';
+  
+  // If it’s the button, change text
+  if (buttonOrLi.tagName === 'BUTTON') {
+    buttonOrLi.textContent = isOpen ? 'Hide Detail' : 'More Detail';
+  }
 }
+
+// Add event listener to clickable <li>
+document.querySelectorAll('.details').forEach(li => {
+  if (li.textContent.includes('Other Accepted Documents')) {
+    li.style.cursor = 'pointer'; // show it's clickable
+    li.addEventListener('click', () => toggleDetails(li));
+  }
+});
 
 function toggleQuestions(button) {
   const detailBox = button.nextElementSibling;

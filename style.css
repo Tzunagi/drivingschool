@@ -307,7 +307,7 @@ section {
   margin-top: 10px;
   margin-bottom: 10px;
   font-weight: bold;
-  color: #FF4C4C;
+  color: #007bff;
 }
 
 .extra-details .requirements-list {
@@ -315,6 +315,17 @@ section {
   padding-left: 30px;
   margin: 0;
   color: #fff;
+}
+
+.other-docs {
+  color: #007bff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.other-docs:hover {
+  color: #0056b3;
 }
 
 .contact-button {

@@ -255,7 +255,7 @@ section {
 }
 
 .tier h3 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin-bottom: 1rem;
   color: white;
 }
@@ -289,10 +289,32 @@ section {
   font-size: 1rem;
   font-weight: lighter;
 }
+
 .extra-details.open {
   max-height: 500px;
   opacity: 1;
   margin-top: 1rem;
+}
+
+.extra-details {
+  text-align: left;
+  border-left: 4px solid white;
+  border-radius: 5px;
+  padding-left: 30px;
+}
+
+.extra-details p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #FF4C4C;
+}
+
+.extra-details .requirements-list {
+  list-style-type: disc;
+  padding-left: 30px;
+  margin: 0;
+  color: #fff;
 }
 
 .contact-button {

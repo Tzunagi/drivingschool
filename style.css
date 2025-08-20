@@ -328,6 +328,18 @@ section {
   color: #0056b3;
 }
 
+#call {
+  color: #007bff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+
+#call:hover {
+  color: #0056b3;
+}
+
 .contact-button {
   display: block;
   width: 100%;

@@ -194,3 +194,16 @@ var swiper = new Swiper(".slide-content", {
     1100: { slidesPerView: 4 },
   },
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const map = L.map('map').setView([40.7799209, -111.9276365], 17); // lat, lng, zoom
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution:
+      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+  }).addTo(map);
+
+  L.marker([40.7799209, -111.9276365]).addTo(map)
+    .bindPopup('C&T Driving School')
+    .openPopup();
+});

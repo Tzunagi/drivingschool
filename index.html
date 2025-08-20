@@ -8,6 +8,7 @@
       content="Serving Salt Lake City, Utah for over 20 years, our trusted driving school offers expert instruction and personalized training. To schedule an appointment, call (801) 652-1893 today."
     />
     <title>C&T Driving School</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css"
@@ -187,18 +188,7 @@
       <section id="location">
         <div class="location-container">
           <!-- Embedded OpenStreetMap -->
-          <div class="map">
-            <iframe
-              width="100%"
-              height="400"
-              frameborder="0"
-              scrolling="no"
-              marginheight="0"
-              marginwidth="0"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=-111.9296365,40.7789209,-111.9256365,40.7809209&layer=mapnik&marker=40.7799209,-111.9276365"
-            >
-            </iframe>
-          </div>
+          <div id="map" style="height: 400px;"></div>
         </div>
 
         <!-- Map Links + Copy -->
@@ -254,6 +244,7 @@
         </div>
       </section>
     </main>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.js"></script>
     <script src="main.js" defer></script>
   </body>

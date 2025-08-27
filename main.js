@@ -26,24 +26,31 @@ function copyAddress(event) {
   });
 }
 
-function toggleDetails(buttonOrLi) {
-  const detailBox = buttonOrLi.closest('.tier').querySelector('.extra-details');
+function toggleDetails(element) {
+  const tier = element.closest('.tier');
+  const detailBox = tier.querySelector('.extra-details');
   detailBox.classList.toggle('open');
-  
+  const button = tier.querySelector('button.contact-button');
   const isOpen = detailBox.classList.contains('open');
-  
-  // If it’s the button, change text
-  if (buttonOrLi.tagName === 'BUTTON') {
-    buttonOrLi.textContent = isOpen ? 'Hide Detail' : 'More Detail';
-  }
+  button.textContent = isOpen ? 'Hide Detail' : 'More Detail';
 }
 
-// Add event listener to clickable <li>
 document.querySelectorAll('.details').forEach(li => {
   if (li.textContent.includes('Other Accepted Documents')) {
-    li.style.cursor = 'pointer'; // show it's clickable
+    li.style.cursor = 'pointer';
     li.addEventListener('click', () => toggleDetails(li));
   }
+});
+
+document.querySelectorAll('.other-docs').forEach(span => {
+  span.addEventListener('click', (event) => {
+    event.stopPropagation();
+    const tier = span.closest('.tier');
+    const toggleBtn = tier.querySelector('button.contact-button[onclick*="toggleDetails"]');
+    if (toggleBtn) {
+      toggleDetails(toggleBtn);
+    }
+  });
 });
 
 function toggleQuestions(button) {

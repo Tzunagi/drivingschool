@@ -1,0 +1,83 @@
+{
+  "welcome": "Bienvenido a C&T Driving School",
+  "subheading": "Sirviendo orgullosamente a nuestra comunidad durante más de 20 años",
+  
+  "services": {
+    "moreDetail": "Más detalles",
+    "homeCourse": "Curso de Estudio en Casa",
+    "homeCoursePrice": "$350",
+    "homeCourseDetails": [
+      "✔ 30 Horas de Curso de Estudio en Casa aprobado por Utah",
+      "✔ 6 Horas de instrucción práctica con un instructor con licencia",
+      "✔ Solo efectivo"
+    ],
+    "homeCourseDesc": "Este paquete es ideal para estudiantes que prefieren aprender a su propio ritmo. Complete el curso de educación vial de 30 horas aprobado por el estado desde la comodidad de su hogar, seguido de 6 horas de instrucción personalizada con un instructor con licencia. Perfecto para horarios ocupados o aprendices independientes. Toda la instrucción cumple con los requisitos de licencia del estado de Utah.",
+
+    "weekendTest": "Examen de Manejo de Fin de Semana",
+    "weekendTestPrice": "$60",
+    "weekendTestDetails": [
+      "✔ Disponible sábado - domingo",
+      "✔ Traiga permiso de aprendiz válido u otros documentos aceptados",
+      "✔ Vehículo proporcionado",
+      "✔ Solo efectivo"
+    ],
+    "weekendTestDesc": "Disponible solo los fines de semana, este examen de manejo es administrado por un examinador certificado de terceros. Prepárese para completar maniobras de conducción como estacionamiento, cambios de carril, señales, etc. Por favor traiga uno de los siguientes: Permiso de Aprendiz de Utah válido, Licencia de Operador Temporal, Licencia extranjera (Debe estar acompañada del documento No Privilege).",
+
+    "weekdayTest": "Examen de Manejo entre Semana",
+    "weekdayTestPrice": "$50",
+    "weekdayTestDetails": [
+      "✔ Disponible lunes - viernes",
+      "✔ Traiga permiso de aprendiz válido u otros documentos aceptados",
+      "✔ Vehículo proporcionado",
+      "✔ Solo efectivo"
+    ],
+    "weekdayTestDesc": "Disponible solo entre semana, este examen de manejo es administrado por un examinador certificado de terceros. Prepárese para completar maniobras de conducción como estacionamiento, cambios de carril, señales, etc. Por favor traiga uno de los siguientes: Permiso de Aprendiz de Utah válido, Licencia de Operador Temporal, Licencia extranjera (Debe estar acompañada del documento No Privilege)."
+  },
+
+  "contact": {
+    "heading": "Contáctenos",
+    "addressHeading": "Dirección",
+    "text": "Estamos aquí para ayudar. Llámenos:",
+    "phone1": "(801) 652-1893",
+    "phone2": "(801) 232-8775",
+    "address": "1265 W 500 N, Salt Lake City, UT 84116",
+    "copyAddress": "Copiar dirección"
+  },
+
+  "faq": {
+    "heading": "Preguntas Frecuentes",
+    "items": [
+      {
+        "question": "¿Qué formas de pago aceptan?",
+        "answer": "Aceptamos <strong>solo efectivo</strong> para todos nuestros servicios. Asegúrese de traer el monto exacto para evitar inconvenientes."
+      },
+      {
+        "question": "¿Qué documentos debo traer para mis clases de manejo?",
+        "answer": "Por favor traiga <strong>uno de los siguientes</strong>:<ul class='requirements-list'><li>Permiso de aprendiz válido de Utah</li><li>Licencia temporal de operador</li><li>Licencia extranjera <em>(Debe estar acompañada del documento de No Privilege)</em></li></ul>"
+      },
+      {
+        "question": "¿Cómo puedo programar una clase de manejo o una prueba de manejo?",
+        "answer": "Estamos abiertos <strong>los 7 días de la semana (lunes a domingo)</strong>. Por favor <a id='call' href='#contact'>llame</a> para hacer una cita con anticipación y asegurar su horario preferido."
+      },
+      {
+        "question": "¿Proporcionan vehículos para la prueba de manejo?",
+        "answer": "Para su comodidad, proporcionamos un <strong>auto bien mantenido</strong> durante la prueba de manejo, eliminando la necesidad de traer un vehículo propio."
+      }
+    ]
+  },
+
+  "reviews": {
+    "rating": "4.9",
+    "stars": "★★★★★",
+    "count": "(1.5k+ reseñas)",
+    "writeReview": "Escribir una reseña"
+  },
+
+  "nav": {
+    "about": "Acerca de",
+    "services": "Servicios",
+    "contact": "Contáctenos",
+    "location": "Ubicación",
+    "faq": "Preguntas Frecuentes"
+  }
+}

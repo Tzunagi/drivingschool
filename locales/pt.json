@@ -1,0 +1,83 @@
+{
+  "welcome": "Bem-vindo à C&T Driving School",
+  "subheading": "Servindo orgulhosamente nossa comunidade há mais de 20 anos",
+
+  "services": {
+    "moreDetail": "Mais detalhes",
+    "homeCourse": "Curso em Casa",
+    "homeCoursePrice": "$350",
+    "homeCourseDetails": [
+      "✔ 30 horas de curso em casa aprovado pelo Estado de Utah",
+      "✔ 6 horas de direção com instrutor licenciado",
+      "✔ Pagamento somente em dinheiro"
+    ],
+    "homeCourseDesc": "Este pacote é ideal para alunos que preferem aprender de forma flexível e independente. Conclua o curso aprovado pelo estado de 30 horas em casa e depois faça 6 horas de aulas práticas com um instrutor licenciado. Todas as aulas atendem aos requisitos de habilitação do Estado de Utah.",
+
+    "weekendTest": "Teste de Direção no Final de Semana",
+    "weekendTestPrice": "$60",
+    "weekendTestDetails": [
+      "✔ Disponível sábado e domingo",
+      "✔ Traga uma permissão de aprendiz válida ou outros documentos aceitos",
+      "✔ Veículo fornecido",
+      "✔ Pagamento somente em dinheiro"
+    ],
+    "weekendTestDesc": "Disponível apenas nos finais de semana, o teste é aplicado por um examinador certificado. Você será avaliado em manobras como estacionamento, troca de faixa e uso de setas. Traga: Permissão de aprendiz válida de Utah, permissão temporária ou carteira de motorista estrangeira (com documento No Privilege).",
+
+    "weekdayTest": "Teste de Direção Durante a Semana",
+    "weekdayTestPrice": "$50",
+    "weekdayTestDetails": [
+      "✔ Disponível de segunda a sexta-feira",
+      "✔ Traga uma permissão de aprendiz válida ou outros documentos aceitos",
+      "✔ Veículo fornecido",
+      "✔ Pagamento somente em dinheiro"
+    ],
+    "weekdayTestDesc": "Disponível apenas nos dias de semana, o teste é aplicado por um examinador certificado. Você será avaliado em manobras como estacionamento, troca de faixa e uso de setas. Traga: Permissão de aprendiz válida de Utah, permissão temporária ou carteira de motorista estrangeira (com documento No Privilege)."
+  },
+
+  "contact": {
+    "heading": "Entre em Contato",
+    "addressHeading": "Endereço",
+    "text": "Estamos aqui para ajudar. Ligue para nós:",
+    "phone1": "(801) 652-1893",
+    "phone2": "(801) 232-8775",
+    "address": "1265 W 500 N, Salt Lake City, UT 84116",
+    "copyAddress": "Copiar endereço"
+  },
+
+  "faq": {
+    "heading": "Perguntas Frequentes",
+    "items": [
+      {
+        "question": "Quais formas de pagamento vocês aceitam?",
+        "answer": "Aceitamos apenas pagamento em dinheiro. Por favor, traga o valor exato."
+      },
+      {
+        "question": "Quais documentos devo levar para minhas aulas de direção?",
+        "answer": "Por favor, traga um dos seguintes: Permissão de aprendiz válida de Utah, permissão temporária ou carteira de motorista estrangeira (com documento No Privilege)."
+      },
+      {
+        "question": "Como agendar uma aula ou teste de direção?",
+        "answer": "Estamos abertos 7 dias por semana (de segunda a domingo). Ligue com antecedência para garantir seu horário preferido."
+      },
+      {
+        "question": "Vocês fornecem veículo para o teste de direção?",
+        "answer": "Sim, fornecemos um carro bem conservado para o teste, assim você não precisa trazer o seu."
+      }
+    ]
+  },
+
+  "reviews": {
+    "rating": "4.9",
+    "stars": "★★★★★",
+    "count": "(1,5k+ avaliações)",
+    "writeReview": "Escrever avaliação"
+  },
+
+  "nav": {
+    "about": "Sobre",
+    "services": "Serviços",
+    "contact": "Contate-nos",
+    "location": "Localização",
+    "faq": "Perguntas Frequentes"
+  }
+}

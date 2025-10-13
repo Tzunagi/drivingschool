@@ -52,6 +52,13 @@ header {
 .nav-links {
   display: flex;
   gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-links #mains {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
 }
 
 .nav-links a {
@@ -428,7 +435,7 @@ section {
     font-size: 1.2rem;
   }
 
-  .nav-links {
+  .nav-links #mains {
     display: none;
   }
 
@@ -698,4 +705,25 @@ section {
   font-size: 1rem;
   font-weight: 600;
   margin: 0;
+}
+
+
+.language-switcher {
+  margin-left: 20px;
+}
+
+.language-switcher select {
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  background: grey;
+  color: white;
+  font-weight: bold;
+}
+
+.language-switcher select:hover {
+  background: grey;
+  transform: scale(1.05);
+  color: white;
 }

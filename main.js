@@ -227,3 +227,44 @@ document.addEventListener("DOMContentLoaded", function () {
     .bindPopup('C&T Driving School')
     .openPopup();
 });
+
+// Change language
+async function setLanguage(lang) {
+  try {
+    const response = await fetch(`locales/${lang}.json`);
+    if (!response.ok) throw new Error('Translation file not found');
+
+    const translations = await response.json();
+
+    function getNested(obj, key) {
+      return key.split('.').reduce((o, i) => {
+        const arrayMatch = i.match(/(\w+)\[(\d+)\]/);
+        if (arrayMatch) {
+          const arrayKey = arrayMatch[1];
+          const index = parseInt(arrayMatch[2]);
+          return o[arrayKey][index];
+        }
+        return o[i];
+      }, obj);
+    }
+
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      const translation = getNested(translations, key);
+      if (translation) {
+        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+          el.placeholder = translation;
+        } else {
+          el.innerHTML = translation;
+        }
+      }
+    });
+  } catch (err) {
+    console.error('Error loading translations:', err);
+  }
+}
+
+// Set default language
+document.addEventListener('DOMContentLoaded', () => {
+  setLanguage('en'); // default language
+});

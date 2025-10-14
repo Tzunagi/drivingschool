@@ -4,6 +4,7 @@
   
   "services": {
     "moreDetail": "More Detail",
+    "hideDetail": "Hide Detail",
     "homeCourse": "Home Study Course",
     "homeCoursePrice": "$350",
     "homeCourseDetails": [

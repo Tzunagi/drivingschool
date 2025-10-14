@@ -32,7 +32,11 @@ function toggleDetails(element) {
   detailBox.classList.toggle('open');
   const button = tier.querySelector('button.contact-button');
   const isOpen = detailBox.classList.contains('open');
-  button.textContent = isOpen ? 'Hide Detail' : 'More Detail';
+  const lang = localStorage.getItem('language') || 'en';
+  const currentTranslations = translations[lang] || translations['en'] || translations['vi']; 
+  button.textContent = isOpen
+    ? currentTranslations.services.hideDetail
+    : currentTranslations.services.moreDetail;
 }
 
 document.querySelectorAll('.details').forEach(li => {

@@ -4,6 +4,7 @@
 
   "services": {
     "moreDetail": "Xem chi tiết",
+    "hideDetail": "Ẩn chi tiết",
     "homeCourse": "Khóa học tại nhà",
     "homeCoursePrice": "$350",
     "homeCourseDetails": [

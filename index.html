@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -27,37 +27,28 @@
 
         <!-- Desktop Navigation -->
         <nav class="nav-links">
-          <div id="mains">
-            <a href="#about" data-i18n="nav.about">About</a>
-            <a href="#services" data-i18n="nav.services">Services</a>
-            <a href="#contact" data-i18n="nav.contact">Contact Us</a>
-            <a href="#location" data-i18n="nav.location">Location</a>
-            <a href="#faq" data-i18n="nav.faq">FAQ</a>
-          </div>
-
-          <div class="language-switcher">
-            <select id="languageSelect" onchange="setLanguage(this.value)">
-              <option value="en">English</option>
-              <option value="vi">Tiếng Việt</option>
-            </select>
-          </div>
-
-          <!-- Mobile Burger Menu Icon -->
-          <div class="burger" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact Us</a>
+          <a href="#online-course">Online Course</a>
+          <a href="#faq">FAQ</a>
         </nav>
+
+        <!-- Mobile Burger Menu Icon -->
+        <div class="burger" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
       </div>
 
       <!-- Mobile Navigation Menu -->
       <div class="mobile-menu" id="mobileMenu">
-        <a href="#about" onclick="toggleMenu()" data-i18n="nav.about">About</a>
-        <a href="#services" onclick="toggleMenu()" data-i18n="nav.services">Services</a>
-        <a href="#contact" onclick="toggleMenu()" data-i18n="nav.contact">Contact Us</a>
-        <a href="#location" onclick="toggleMenu()" data-i18n="nav.location">Location</a>
-        <a href="#faq" onclick="toggleMenu()" data-i18n="nav.faq">Frequently Asked Questions</a>
+        <a href="#about" onclick="toggleMenu()">About</a>
+        <a href="#services" onclick="toggleMenu()">Services</a>
+        <a href="#contact" onclick="toggleMenu()">Contact Us</a>
+        <a href="#online-course" onclick="toggleMenu()">Online Course</a>
+        <a href="#faq" onclick="toggleMenu()">Frequently Asked Questions</a>
       </div>
     </header>
 
@@ -66,12 +57,11 @@
       <!-- ======= ABOUT SECTION ======= -->
       <section id="about">
         <div class="about-glass">
-          <h2 id="welcome" data-i18n="welcome">
-            Welcome to C&T Driving School
-          </h2>
-          <p id="subheading" data-i18n="subheading">
-            Proudly Serving Our Community for Over 20 Years
-          </p>
+          <h2 id="welcome">Welcome to C&T Driving School</h2>
+          <p id="subheading">Proudly Serving Our Community for Over 20 Years</p>
+          <a href="#services" class="new-badge">
+            Online Course Now Available!
+          </a>
         </div>
         <!-- ======= GOOGLE REVIEWS ======= -->
         <div class="google-reviews">
@@ -81,15 +71,14 @@
             class="google-logo"
           />
           <div class="review-summary">
-            <span class="rating" data-i18n="reviews.rating">4.9</span>
-            <span class="stars" data-i18n="reviews.stars">★★★★★</span>
-            <span class="count" data-i18n="reviews.count">(1.8k+ Reviews)</span>
+            <span class="rating">4.9</span>
+            <span class="stars">★★★★★</span>
+            <span class="count">(1.8k+ Reviews)</span>
           </div>
           <a
             href="https://www.google.com/search?hl=en-US&gl=us&q=C+and+T+Driving+School,+1265+W+500+N,+Salt+Lake+City,+UT+84116&ludocid=16477990167905334814&lsig=AB86z5U4kVOmlpFKMrznZYQuo_pG#lrd=0x8752f441f01d54ad:0xe4ad94c0ea60761e,3"
             target="_blank"
             class="write-review-button"
-            data-i18n="reviews.writeReview"
           >
             Write a Review
           </a>
@@ -111,34 +100,25 @@
         <div class="tier-container">
           <!-- Home Study Course -->
           <div class="tier">
-            <h3 data-i18n="services.homeCourse">Home Study Course</h3>
-            <h2 data-i18n="services.homeCoursePrice">$350</h2>
+            <h3>Complete Home Study Course</h3>
+            <h2>$350</h2>
             <ul>
-              <li class="details" data-i18n="services.homeCourseDetails.0">
+              <li class="details">
                 ✔ 30 Hours of Utah-Approved Home Study Course
               </li>
-              <li class="details" data-i18n="services.homeCourseDetails.1">
+              <li class="details">
                 ✔ 6 Hours of Behind-the-Wheel Instruction with a Licensed
                 Instructor
               </li>
-              <li class="details" data-i18n="services.homeCourseDetails.2">
-                ✔ Cash Only
-              </li>
+              <li class="details">✔ Cash Only</li>
             </ul>
-            <a
-              href="#contact"
-              class="contact-button"
-              data-i18n="contact.heading"
+            <a href="#contact" class="contact-button signup-button-blue"
               >Contact Us</a
             >
-            <button
-              class="contact-button"
-              onclick="toggleDetails(this)"
-              data-i18n="services.moreDetail"
-            >
+            <button class="contact-button" onclick="toggleDetails(this)">
               More Detail
             </button>
-            <div class="extra-details" data-i18n="services.homeCourseDesc">
+            <div class="extra-details">
               This package is ideal for students who prefer flexible, self-paced
               learning. Complete the 30-hour state-approved driver education
               course from the comfort of your home, followed by 6 hours of
@@ -148,85 +128,108 @@
             </div>
           </div>
 
-          <!-- Weekend Road Test -->
+          <!-- Online Study Course -->
           <div class="tier">
-            <h3 data-i18n="services.weekendTest">Weekend State Road Test</h3>
-            <h2 data-i18n="services.weekendTestPrice">$60</h2>
+            <h3><span class="new-badge">New!</span>Online Study Course</h3>
+            <h2>$90</h2>
             <ul>
-              <li class="details" data-i18n="services.weekendTestDetails.0">
-                ✔ Available Saturday - Sunday
+              <li class="details">
+                ✔ 30 Hours of Utah-Approved Online Study Course
               </li>
-              <li class="details" data-i18n="services.weekendTestDetails.1">
-                ✔ Bring Valid Learner’s Permit or Other Accepted Documents
-              </li>
-              <li class="details" data-i18n="services.weekendTestDetails.2">
-                ✔ Vehicle Provided
-              </li>
-              <li class="details" data-i18n="services.weekendTestDetails.3">
-                ✔ Cash Only
+              <li class="details">✔ In-Person Final Exam (Utah Requirement)</li>
+              <li class="details">
+                ✔ Instant Course Access After Online Payment
               </li>
             </ul>
-            <a
-              href="#contact"
-              class="contact-button"
-              data-i18n="contact.heading"
-              >Contact Us</a
+            <a href="#online-course" class="contact-button signup-button"
+              >Sign Up Now</a
             >
-            <button
-              class="contact-button"
-              onclick="toggleDetails(this)"
-              data-i18n="services.moreDetail"
-            >
+            <button class="contact-button" onclick="toggleDetails(this)">
               More Detail
             </button>
-            <div class="extra-details" data-i18n="services.weekendTestDesc">
-              Available only on the weekend, this road test is administered by a
-              certified third-party examiner. Be prepared to complete driving
-              maneuvers such as parking, lane changes, signaling, etc. Please
-              bring one of the following: Valid Utah Learner Permit, Temporary
-              Operator License, Foreign License (Must be accompanied by No
-              Privilege document).
+            <div class="extra-details">
+              This package is perfect for students who prefer the flexibility of
+              completing their driver education online at their own pace.
+              Complete the 30-hour Utah-approved online driver education course
+              from the comfort of your home, then schedule your required
+              in-person final exam to receive course credit. Ideal for busy
+              schedules and independent learners, this course meets all Utah
+              state driver education requirements.
+              <p>Please note: This $90 online course does not include the
+                required 6 hours of behind-the-wheel instruction.
+                Behind-the-wheel instruction is available separately.</p>
+            </div>
+          </div>
+
+          <!-- Weekend Road Test -->
+          <div class="tier">
+            <h3>Weekend State Road Test</h3>
+            <h2>$60</h2>
+            <ul>
+              <li class="details">✔ Available Saturday - Sunday</li>
+              <li class="details clickable" data-target="extra-details">
+                ✔ Bring Valid Learner’s Permit or
+                <span class="other-docs">Other Accepted Documents</span>
+              </li>
+              <li class="details">✔ Vehicle Provided</li>
+              <li class="details">✔ Cash Only</li>
+            </ul>
+            <a href="#contact" class="contact-button signup-button-blue"
+              >Contact Us</a
+            >
+            <button class="contact-button" onclick="toggleDetails(this)">
+              More Detail
+            </button>
+            <div class="extra-details">
+              Available only on the <strong>weekend</strong>, this road test is
+              administered by a certified third-party examiner. Be prepared to
+              complete driving maneuvers such as parking, lane changes,
+              signaling, etc.
+              <p>Please bring one of the following:</p>
+              <ul class="requirements-list">
+                <li>Valid Utah Learner Permit</li>
+                <li>Temporary Operator License</li>
+                <li>
+                  Foreign License
+                  <em>(Must be accompanied by No Privilege document)</em>
+                </li>
+              </ul>
             </div>
           </div>
 
           <!-- Weekday Road Test -->
           <div class="tier">
-            <h3 data-i18n="services.weekdayTest">Weekday State Road Test</h3>
-            <h2 data-i18n="services.weekdayTestPrice">$50</h2>
+            <h3>Weekday State Road Test</h3>
+            <h2>$50</h2>
             <ul>
-              <li class="details" data-i18n="services.weekdayTestDetails.0">
-                ✔ Available Monday - Friday
+              <li class="details">✔ Available Monday - Friday</li>
+              <li class="details clickable" data-target="extra-details">
+                ✔ Bring Valid Learner’s Permit or
+                <span class="other-docs">Other Accepted Documents</span>
               </li>
-              <li class="details" data-i18n="services.weekdayTestDetails.1">
-                ✔ Bring Valid Learner’s Permit or Other Accepted Documents
-              </li>
-              <li class="details" data-i18n="services.weekdayTestDetails.2">
-                ✔ Vehicle Provided
-              </li>
-              <li class="details" data-i18n="services.weekdayTestDetails.3">
-                ✔ Cash Only
-              </li>
+              <li class="details">✔ Vehicle Provided</li>
+              <li class="details">✔ Cash Only</li>
             </ul>
-            <a
-              href="#contact"
-              class="contact-button"
-              data-i18n="contact.heading"
+            <a href="#contact" class="contact-button signup-button-blue"
               >Contact Us</a
             >
-            <button
-              class="contact-button"
-              onclick="toggleDetails(this)"
-              data-i18n="services.moreDetail"
-            >
+            <button class="contact-button" onclick="toggleDetails(this)">
               More Detail
             </button>
-            <div class="extra-details" data-i18n="services.weekdayTestDesc">
-              Available only on the weekday, this road test is administered by a
-              certified third-party examiner. Be prepared to complete driving
-              maneuvers such as parking, lane changes, signaling, etc. Please
-              bring one of the following: Valid Utah Learner Permit, Temporary
-              Operator License, Foreign License (Must be accompanied by No
-              Privilege document).
+            <div class="extra-details">
+              Available only on the <strong>weekday</strong>, this road test is
+              administered by a certified third-party examiner. Be prepared to
+              complete driving maneuvers such as parking, lane changes,
+              signaling, etc.
+              <p>Please bring one of the following:</p>
+              <ul class="requirements-list">
+                <li>Valid Utah Learner Permit</li>
+                <li>Temporary Operator License</li>
+                <li>
+                  Foreign License
+                  <em>(Must be accompanied by No Privilege document)</em>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -234,22 +237,6 @@
 
       <!-- ======= CONTACT SECTION ======= -->
       <section id="contact">
-        <div class="contact-glass">
-          <h2 data-i18n="contact.heading">Contact Us</h2>
-          <p data-i18n="contact.text">We’re here to help. Give us a call:</p>
-          <div class="phone-numbers">
-            <a href="tel:8016521893" data-i18n="contact.phone1"
-              >(801) 652-1893</a
-            >
-            <a href="tel:8012328775" data-i18n="contact.phone2"
-              >(801) 232-8775</a
-            >
-          </div>
-        </div>
-      </section>
-
-      <!-- ======= LOCATION SECTION ======= -->
-      <section id="location">
         <div class="location-container">
           <!-- Embedded OpenStreetMap -->
           <div id="map" style="height: 400px"></div>
@@ -257,7 +244,14 @@
 
         <!-- Map Links + Copy -->
         <div class="contact-glass">
-          <h2 data-i18n="contact.addressHeading">Address</h2>
+          <h2>Contact Us</h2>
+          <p>We’re here to help. Give us a call:</p>
+          <div class="phone-numbers">
+            <a href="tel:8016521893">(801) 652-1893</a>
+            <a href="tel:8012328775">(801) 232-8775</a>
+          </div>
+          <div class="spacer"></div>
+          <h2>Address</h2>
           <p>1265 W 500 N, Salt Lake City, UT 84116</p>
           <div class="phone-numbers">
             <a
@@ -270,43 +264,81 @@
               target="_blank"
               >Apple Maps</a
             >
-            <a
-              href="#location"
-              onclick="copyAddress(event)"
-              id="copyLink"
-              data-i18n="contact.copyAddress"
+            <a href="#location" onclick="copyAddress(event)" id="copyLink"
+              >Copy Address</a
             >
-              Copy Address
-            </a>
           </div>
+        </div>
+      </section>
+
+      <!-- ======= ONLINE COURSE SECTION ======= -->
+      <section id="online-course">
+        <div class="tutorial-video">
+          <h2>Quick Online Course Sign Up Tutorial</h2>
+          <iframe
+            src="https://www.youtube.com/embed/1MwqnmLRMGM?si=SYWDHZkeOuuDERhw"
+            title="How to Sign Up for the Online Course"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+              web-share;
+            "
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+        <div class="contact-glass online">
+          <h2>Begin Your Online Journey</h2>
+          <p>
+            Signing up only takes a few minutes. Watch the video tutorial above
+            or follow the written instructions below to learn how to register
+            for our Utah-approved online driver education course.
+          </p>
+          <ol class="registration-steps">
+            <li>Click the <strong>Register Now</strong> button below.</li>
+            <li>Click <strong>Create new account</strong> to register.</li>
+            <li>
+              After registering, check your email (including your Spam folder if
+              you don't see the confirmation email) and click
+              <strong>Confirm your account</strong>.
+            </li>
+            <li>
+              Once you're logged in, click the <strong>Home</strong> tab, select
+              the course, and click <strong>Enrol now</strong> to complete your
+              purchase.
+            </li>
+            <li>You can now begin the course!</li>
+          </ol>
+          <a
+            href="https://learn.candtdriving.com/login/index.php"
+            target="_blank"
+            class="contact-button signup-button"
+          >
+            Register Now
+          </a>
         </div>
       </section>
 
       <!-- ======= FAQ SECTION ======= -->
       <section id="faq">
         <div class="contact-glass">
-          <h2 data-i18n="faq.heading">Frequently Asked Questions</h2>
-
-          <button
-            class="contact-button"
-            onclick="toggleQuestions(this)"
-            data-i18n="faq.items[0].question"
-          >
+          <h2>Frequently Asked Questions</h2>
+          <button class="contact-button" onclick="toggleQuestions(this)">
             What forms of payment do you accept?
           </button>
-          <div class="extra-details" data-i18n="faq.items[0].answer">
-            We accept <strong>cash only</strong> for all our services. Please
-            make sure to bring the exact amount to avoid any inconvenience.
+          <div class="extra-details">
+            We accept <strong>cash only</strong> for all our services
+            <strong>except the online course</strong>. Please make sure to bring
+            the exact amount to avoid any inconvenience.
           </div>
-
-          <button
-            class="contact-button"
-            onclick="toggleQuestions(this)"
-            data-i18n="faq.items[1].question"
-          >
+          <button class="contact-button" onclick="toggleQuestions(this)">
             What documents do I need to bring for my driving lessons?
           </button>
-          <div class="extra-details" data-i18n="faq.items[1].answer">
+          <div class="extra-details">
             Please bring <strong>one of the following</strong>:
             <ul class="requirements-list">
               <li>Valid Utah Learner Permit</li>
@@ -317,28 +349,18 @@
               </li>
             </ul>
           </div>
-
-          <button
-            class="contact-button"
-            onclick="toggleQuestions(this)"
-            data-i18n="faq.items[2].question"
-          >
+          <button class="contact-button" onclick="toggleQuestions(this)">
             How do I schedule a driving lesson or road test?
           </button>
-          <div class="extra-details" data-i18n="faq.items[2].answer">
+          <div class="extra-details">
             We are open <strong>7 days a week (Monday to Sunday)</strong>.
             Please <a id="call" href="#contact">call</a> to make an appointment
             in advance to secure your preferred time.
           </div>
-
-          <button
-            class="contact-button"
-            onclick="toggleQuestions(this)"
-            data-i18n="faq.items[3].question"
-          >
+          <button class="contact-button" onclick="toggleQuestions(this)">
             Do you provide vehicles for the road test?
           </button>
-          <div class="extra-details" data-i18n="faq.items[3].answer">
+          <div class="extra-details">
             For your convenience, we supply a
             <strong>well-maintained car</strong> during the road test,
             eliminating the need to bring a vehicle.

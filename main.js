@@ -32,11 +32,7 @@ function toggleDetails(element) {
   detailBox.classList.toggle('open');
   const button = tier.querySelector('button.contact-button');
   const isOpen = detailBox.classList.contains('open');
-  const lang = localStorage.getItem('language') || 'en';
-  const currentTranslations = translations[lang] || translations['en'] || translations['vi']; 
-  button.textContent = isOpen
-    ? currentTranslations.services.hideDetail
-    : currentTranslations.services.moreDetail;
+  button.textContent = isOpen ? 'Hide Detail' : 'More Detail';
 }
 
 document.querySelectorAll('.details').forEach(li => {
@@ -82,6 +78,12 @@ changeBackground(); // initial image
 setInterval(changeBackground, 5000); // change every 5 seconds
 
 const reviews = [
+  {
+    name: "Jasper F.",
+    stars: "★★★★★",
+    description: "This is by far the best driving school to do your road test. My first time getting my license and they were amazing. She taught me and helped me with everything while I was on the road. Very happy with my experience here at C and T driving school. Thank you to Thanh Pham for your kindness and kind service. If your looking for somewhere to get your drivers license, C and T driving school is the way to do it.",
+    link: "https://maps.app.goo.gl/kzeeFQGZZyFi7KHH8"
+  },
   {
     name: "Sung Jin S.",
     stars: "★★★★★",
@@ -230,45 +232,4 @@ document.addEventListener("DOMContentLoaded", function () {
   L.marker([40.7799209, -111.9276365]).addTo(map)
     .bindPopup('C&T Driving School')
     .openPopup();
-});
-
-// Change language
-async function setLanguage(lang) {
-  try {
-    const response = await fetch(`locales/${lang}.json`);
-    if (!response.ok) throw new Error('Translation file not found');
-
-    const translations = await response.json();
-
-    function getNested(obj, key) {
-      return key.split('.').reduce((o, i) => {
-        const arrayMatch = i.match(/(\w+)\[(\d+)\]/);
-        if (arrayMatch) {
-          const arrayKey = arrayMatch[1];
-          const index = parseInt(arrayMatch[2]);
-          return o[arrayKey][index];
-        }
-        return o[i];
-      }, obj);
-    }
-
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      const key = el.getAttribute('data-i18n');
-      const translation = getNested(translations, key);
-      if (translation) {
-        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-          el.placeholder = translation;
-        } else {
-          el.innerHTML = translation;
-        }
-      }
-    });
-  } catch (err) {
-    console.error('Error loading translations:', err);
-  }
-}
-
-// Set default language
-document.addEventListener('DOMContentLoaded', () => {
-  setLanguage('en'); // default language
 });

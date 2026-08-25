@@ -228,12 +228,18 @@ section {
 ========================= */
 .tier-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   gap: 1.5rem;
-  max-width: 1000px;
+  max-width: 1300px;
   width: 100%;
   padding: 2rem 1rem;
+}
+
+@media (max-width: 1200px) {
+  .tier-container {
+    flex-wrap: wrap;
+  }
 }
 
 .tier {
@@ -367,6 +373,44 @@ section {
   background-color: rgba(50, 50, 50, 0.5);
 }
 
+.new-badge {
+  display: inline-block;
+  background: #e53935;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+}
+
+.signup-button {
+  background-color: rgba(229, 57, 53, 0.5);
+  border: 1px solid rgba(229, 57, 53, 0.6);
+  color: white;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.signup-button:hover {
+  background-color: rgba(229, 57, 53, 0.35);
+  transform: translateY(-2px);
+}
+
+.signup-button-blue {
+  background-color: rgba(37, 99, 235, 0.5);
+  border: 1px solid rgba(37, 99, 235, 0.6);
+  color: white;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.signup-button-blue:hover {
+  background-color: rgba(37, 99, 235, 0.35);
+  transform: translateY(-2px);
+}
+
 /* =========================
    Location Map
 ========================= */
@@ -409,6 +453,75 @@ section {
   width: 100%;
 }
 
+.spacer {
+  height: 2rem;
+}
+
+/* =========================
+   Online Course
+========================= */
+#online-course {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background: url('./files/computer.jpg') no-repeat center center/cover;
+  z-index: 1;
+}
+
+#online-course::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
+.tutorial-video {
+  width: 90%;
+  max-width: 900px;
+  /* Using '0 auto 2rem auto' centers the container itself on the page */
+  margin: 0 auto 2rem auto; 
+  text-align: center;
+  color: white;
+}
+
+.tutorial-video h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.tutorial-video iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.contact-glass.online {
+  width: 90%;
+  max-width: 900px;
+}
+
+.registration-steps {
+  max-width: 600px;
+  margin: 1.5rem auto;
+  padding-left: 1.5rem;
+  text-align: left;
+  line-height: 1.8;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.registration-steps li {
+  margin-bottom: 0.5rem;
+}
+
 /* =========================
    Frequently Asked Questions
 ========================= */
@@ -435,7 +548,7 @@ section {
     font-size: 1.2rem;
   }
 
-  .nav-links #mains {
+  .nav-links {
     display: none;
   }
 
@@ -705,25 +818,4 @@ section {
   font-size: 1rem;
   font-weight: 600;
   margin: 0;
-}
-
-
-.language-switcher {
-  margin-left: 20px;
-}
-
-.language-switcher select {
-  padding: 5px 10px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  cursor: pointer;
-  background: grey;
-  color: white;
-  font-weight: bold;
-}
-
-.language-switcher select:hover {
-  background: grey;
-  transform: scale(1.05);
-  color: white;
 }
